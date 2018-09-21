@@ -1,0 +1,36 @@
+{
+  "name": "workshop-express-mongodb",
+  "version": "1.0.0",
+  "description": "Treinamento: REST API com Express e MongoDB.",
+  "author": "Roberto Achar <robertoachar@gmail.com>",
+  "license": "CC-BY-NC-SA-4.0",
+  "homepage": "https://github.com/robertoachar/workshop-express-mongodb#readme",
+  "keywords": [
+    "workshop",
+    "vue",
+    "vuepress"
+  ],
+  "scripts": {
+    "build": "vuepress build docs",
+    "lint": "eslint docs/**/*.js",
+    "start": "vuepress dev docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robertoachar/workshop-express-mongodb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/robertoachar/workshop-express-mongodb/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "5.6.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-config-prettier": "3.0.1",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-prettier": "2.6.2",
+    "prettier": "1.14.3",
+    "vuepress": "0.14.4"
+  },
+  "private": true
+}
