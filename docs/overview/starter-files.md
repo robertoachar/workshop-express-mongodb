@@ -11,7 +11,7 @@ Esse treinamento disponibiliza 04 opções para iniciar o desenvolvimento da apl
 Independente da forma escolhida, os arquivos iniciais serão os mesmos.
 :::
 
-Os arquivos iniciais desse treinamento estão configurados para trabalhar com o código-fonte no diretório `src`. No diretório raíz (`\`) estão apenas os arquivos que compõem o projeto.
+Os arquivos iniciais desse treinamento estão configurados para trabalhar com o código-fonte no diretório `src`. No diretório raíz (`/`) estão apenas os arquivos que compõem o projeto.
 
 ## Iniciar do Zero
 

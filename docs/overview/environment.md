@@ -4,7 +4,7 @@ Nessa seção você encontrará as instruções necessárias para preparar seu a
 
 ## Editor de Código
 
-Você pode utilizar qualquer editor de códigos para desenvolver seus projetos em Node.js. Pessoalmente, eu indico a utilização do [VS Code](https://code.visualstudio.com/) da Microsoft. O VS Code é um editor de códigos gratuito, de código-fonte aberto e tem suporte aos 03 principais sistemas operacionais atualmente: **Linux**, **macOS** e **Windows**. Além disso ele disponibiliza um Terminal integrado para melhorar a experiência do desenvolvedor.
+Você pode utilizar qualquer editor de códigos para desenvolver seus projetos em Node.js. Eu indico a utilização do [VS Code](https://code.visualstudio.com/) da Microsoft. O VS Code é um editor de códigos gratuito, de código-fonte aberto e tem suporte aos 03 principais sistemas operacionais atualmente: **Linux**, **macOS** e **Windows**. Além disso ele disponibiliza um Terminal integrado para melhorar a experiência do desenvolvedor.
 
 Para instalar o VS Code, acesse a [página de downloads](https://code.visualstudio.com/#alt-downloads) e escolha a versão correta para o seu sistema operacional.
 
@@ -18,7 +18,7 @@ Para instalar o VS Code, acesse a [página de downloads](https://code.visualstud
 
 **Node.js** é um ambiente de execução de JavaScript que roda sob o V8 do Chrome.
 
-Para instalar o Node.js, acesse o site oficial do [Node.js](https://nodejs.org/) e siga as instruções para instalar a versão correta para o seu sistema operacional. O Node.js está disponível para os 03 sistemas operacionais mais utilizados atualmente: **Linux**, **macOS** e **Windows**.
+Para instalar o Node.js, acesse o site do [Node.js](https://nodejs.org/) e siga as instruções para instalar a versão correta para o seu sistema operacional. O Node.js está disponível para os 03 sistemas operacionais mais utilizados atualmente: **Linux**, **macOS** e **Windows**.
 
 ::: tip Versões do Node.js
 **LTS** é a versão estável. **Current** é a versão com funcionalidades experimentais.
@@ -33,7 +33,7 @@ $ node -v
 v10.10.0
 ```
 
-Se a instalação estiver correta, o comando irá apresentar a versão instalada no seu sistema operacional. No meu caso, a versão é a **v10.10.0**.
+Se a instalação estiver correta, o comando irá exibir a versão instalada no seu sistema operacional. No meu caso, a versão é a **v10.10.0**.
 
 ## npm
 
@@ -46,7 +46,7 @@ $ npm -v
 6.4.1
 ```
 
-Se a instalação estiver correta, o comando irá apresentar a versão instalada no seu sistema operacional. No meu caso, a versão é a **v6.4.1**.
+Se a instalação estiver correta, o comando irá exibir a versão instalada no seu sistema operacional. No meu caso, a versão é a **v6.4.1**.
 
 ::: warning Autalização do npm
 O instalador do Node.js nem sempre instala a última versão do npm.
@@ -66,11 +66,11 @@ $ npm -v
 
 ## MongoDB
 
-**MongoDB** é um banco de dados de documentos. Ele armazena os dados de forma semelhante a um documento JSON. Seus campos e dados podem variar de documento para documento. Você pode optar por utilizar o MongoDB de 02 formas: instalação local ou serviço remoto.
+**MongoDB** é um banco de dados de documentos. Ele armazena os dados de forma semelhante a um documento JSON. Seus campos e dados podem variar de documento para documento. Você pode optar por utilizar o MongoDB de 02 formas: **instalação local** ou **serviço remoto**.
 
 ### Instalação local
 
-Para instalar o MongoDB, acesse o site oficial do [MongoDB](https://www.mongodb.com/) e siga as instruções para instalar a versão correta para o seu sistema operacional. Escolha a versão _Community Edition_. O MongoDB está disponível para os 03 sistemas operacionais mais utilizados atualmente: **Linux**, **macOS** e **Windows**.
+Para instalar o MongoDB, acesse o site do [MongoDB](https://www.mongodb.com/) e siga as instruções para instalar a versão correta para o seu sistema operacional. Escolha a versão _Community Edition_. O MongoDB está disponível para os 03 sistemas operacionais mais utilizados atualmente: **Linux**, **macOS** e **Windows**.
 
 - [Instruções de Instalação para o Linux](https://docs.mongodb.com/manual/administration/install-on-linux/).
 - [Instruções de Instalação para o macOS](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/).
@@ -97,12 +97,12 @@ Server has startup warnings:
 ```
 
 ::: tip Dica
-Para sair do MongoDB, digite `quit()` e pressione `Enter` ou pressione `Ctrl + C`.
+Para sair do MongoDB, digite `quit() + Enter` ou pressione `Ctrl + C`.
 :::
 
 ### Serviço remoto
 
-Caso você não queira instalar o MongoDB na sua máquina, você pode utilizar qualquer serviço de hospedagem de banco de dados MongoDB. Eu recomendo o serviço da [mLab](https://mlab.com/), pois oferece um plano gratuito de 500MB, espaço mais que necessário para realizar o treinamento.
+Caso você não queira instalar o MongoDB na sua máquina, você pode utilizar qualquer serviço de hospedagem de banco de dados MongoDB. Eu recomendo o serviço da [mLab](https://mlab.com/), pois oferece um plano gratuito de 500MB, espaço mais que suficiente para realizar o treinamento.
 
 Para criar uma instância remota do MongoDB, acesse a [página da mLabs](https://mlab.com/signup/), faça o cadastro e siga as intruções para criar um novo banco de dados. Com o banco de dados criado, crie um usuário com permissão de escrita e leitura. Esse usuário será utilizado para se conectar ao banco de dados através da API.
 

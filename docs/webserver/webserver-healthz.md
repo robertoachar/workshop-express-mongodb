@@ -1,8 +1,8 @@
 # Healthz
 
-**Healthz** é uma técnica de monitoramento muito utilizada pelo time de **DevOps**. Ela consiste em verificar periodicamente a "saúde" (health) da aplicação. O termo _healthz_ foi introduzido pelo Google e é amplamente utilizado dentro da empresa. Existem outras rotas parecidas, mas com propósitos diferentes.
+**Healthz** é uma técnica de monitoramento muito utilizada pelo time de **DevOps**. Ela consiste em verificar periodicamente a "saúde" (health) da aplicação. O termo _healthz_ foi introduzido pelo Google e é amplamente utilizado dentro da empresa.
 
-O objetivo dessa técnica é fazer requisições periódicas em uma determinada rota da aplicação para certificar que a aplicação está "saudável", ou seja, funcionando. Por convenção, utilizamos a rota `/healthz`.
+O objetivo dessa técnica é fazer requisições periódicas em uma determinada rota da aplicação para certificar que a aplicação está disponível e funcional. Por convenção, utilizamos a rota `/healthz`.
 
 ## Criando a rota /healthz
 
@@ -50,10 +50,10 @@ router.get('/healthz', (req, res) => {
 });
 ```
 
-A função `ping()` é utilizada para testar se um servidor está respondendo aos comandos. Quando a rota `/healthz` for solicitada, o Express realiza um `ping` no banco de dados. Se a conexão estiver ativa, a rota retorna o _status_ `200 OK`, caso contrário ela retorna o _status_ `500 Internal Server Error`.
+A função `ping()` é utilizada para testar se um servidor está respondendo aos comandos. Quando a rota `/healthz` for solicitada, o Mongoose realiza um `ping` no banco de dados. Se a conexão estiver ativa, a rota retorna o _status_ `200 OK`, caso contrário ela retorna o _status_ `500 Internal Server Error`.
 
 ::: tip Dica
-Se a aplicação utilizasse mais algum serviço além do banco de dados, como por exemplo, um serviço de _cache_, nós deveríamos testar também se o serviço de _cache_ está ativo.
+Se a aplicação utilizasse mais algum serviço além do banco de dados, como por exemplo um serviço de _cache_, nós deveríamos testar também se o serviço de _cache_ está ativo.
 :::
 
 ## Mundo Real

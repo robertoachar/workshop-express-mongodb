@@ -6,7 +6,7 @@ Quando estamos desenvolvendo um projeto, uma das tarefas que atrapalha a produti
 
 **Nodemon** é uma ferramenta que monitora as alterações realizadas no código-fonte e reinicia o projeto automaticamente.
 
-Para mais informações sobre o Nodemon, acesse o site [https://nodemon.io/](https://nodemon.io/).
+Para mais informações sobre o Nodemon, acesse [https://nodemon.io/](https://nodemon.io/).
 
 ## Instalando o Nodemon
 
@@ -48,7 +48,7 @@ Para executar o Nodemon através do npm, abra o Terminal e digite:
 $ npm start
 ```
 
-Esse script executa o comando `nodemon src/index.js` e exibe a seguinte informação na saída do Terminal.
+Esse script executa o comando `nodemon src/index.js` e exibe a seguinte informação no Terminal.
 
 ```bash
 [nodemon] 1.18.4
@@ -59,7 +59,7 @@ Hello Node
 [nodemon] clean exit - waiting for changes before restart
 ```
 
-Esse `log` informa que o Nodemon está em modo de monitoração, executou o comando `node src/index` e está aguardando novas alterações.
+Esse `log` informa que o Nodemon está em modo de monitoração, executou o comando `node src/index.js` e está aguardando novas alterações.
 
 Faça uma alteração no código e salve para reiniciar o Nodemon.
 
@@ -67,7 +67,7 @@ Faça uma alteração no código e salve para reiniciar o Nodemon.
 console.log('Hello Nodemon');
 ```
 
-Assim que o arquivo for salvo, a seguinte informação é exibida na saída do Terminal.
+Assim que o arquivo for salvo, a seguinte informação é exibida no Terminal.
 
 ```bash
 [nodemon] restarting due to changes...

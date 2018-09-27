@@ -68,7 +68,7 @@ Abra o Postman e faça uma requisição `GET` em `http://localhost:3000/`.
 
 Para aplicações simples não há necessidade de criar um módulo para as rotas, elas podem ser definidas no mesmo local do Express (`app.js`).
 
-Para aplicações de médio e grande porte, é uma boa prática modularizar as rotas para facilitar na criação de novas rotas e na manutenção das rotas existentes, além de manter as rotas separadas por domínios.
+Para aplicações de médio e grande porte, é uma boa prática modularizar as rotas para facilitar a criação de novas rotas e a manutenção das rotas existentes, além de manter as rotas separadas por domínios.
 
 ## Resumo
 

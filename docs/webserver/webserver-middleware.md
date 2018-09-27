@@ -1,10 +1,10 @@
 # Middlewares
 
-**Middlewares** são funcões que tem acesso aos objetos `req` (request) e `res` (response), respectivamente requisição e resposta. Os _middlewares_ podem executar qualquer tipo de código e realizar alterações nos objetos `req` e `res`, entre outros.
+**Middlewares** são funções que tem acesso aos objetos `req` (request) e `res` (response), respectivamente requisição e resposta. Os _middlewares_ podem executar qualquer tipo de código e realizar alterações nos objetos `req` e `res`, entre outros.
 
 ## Segurança
 
-O Express é apenas um _framework_ que disponibiliza um servidor Web com um conjunto de recursos necessários para a criação de uma API robusta. Esse servidor precisa ser protegido e é tarefa do desenvolvedor configurar alguns _middlewares_ para elevar o nível de segurança do Express.
+O Express é apenas um _framework_ de aplicação que disponibiliza um servidor Web com um conjunto de recursos necessários para a criação de uma API. Esse servidor precisa ser protegido e é tarefa do desenvolvedor configurar alguns _middlewares_ para elevar o nível de segurança do Express.
 
 ## Helmet
 
@@ -85,7 +85,7 @@ X-Frame-Options → SAMEORIGIN
 X-XSS-Protection → 1; mode=block
 ```
 
-O Helmet fez as alterações no cabeçalho e adicionou as proteções no Express. É importante notar que ele removeu o `X-Powered-By: Express`.
+O Helmet fez as alterações nos cabeçalhos e adicionou as proteções no Express. É importante notar que ele removeu o `X-Powered-By: Express`.
 
 ## CORS
 
@@ -113,7 +113,7 @@ Esse comando instala o CORS como dependência no `package.json`.
   }
 ```
 
-### Intergração com o Express
+### Integração com o Express
 
 Para integrar o CORS no Express, edite o arquivo `app.js`.
 
@@ -140,13 +140,13 @@ Access-Control-Allow-Methods → GET, POST, PUT, PATCH, DELETE
 Access-Control-Allow-Origin → *
 ```
 
-Esse _middleware_ configura o CORS com as opções mais comuns utilizadas por APIs públicas. Ele permite acesso de quaquer origem, aceita os métodos `GET`, `POST`, `PUT`, `PATCH` e `DELETE`, e aceita os cabeçalhos `Authorization` e `Content-Type`.
+Esse _middleware_ configura o CORS com as opções mais comuns utilizadas por APIs públicas. Ele permite acesso de quaquer origem (`*`), aceita os métodos `GET`, `POST`, `PUT`, `PATCH` e `DELETE`, e aceita os cabeçalhos `Authorization` e `Content-Type`.
 
 ::: tip Dica
 Caso seu cenário não seja tão permissivo, você tem 02 opções:
 
-1. Utilizar outro _middleware_.
-2. Configurar o CORS direto no Express.
+1. Utilizar outro _middleware_
+2. Configurar o CORS direto no Express
 
 :::
 

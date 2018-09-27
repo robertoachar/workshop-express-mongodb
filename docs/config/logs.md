@@ -4,7 +4,7 @@ Uma das funcionalidades básicas de qualquer aplicação é a capacidade de exib
 
 ## Winston
 
-**Winston** é uma biblioteca de registros e foi projetada para realizar o registro das informações da aplicação de forma **assíncrona**, ou seja, respeitando a arquitetura do Node.js.
+**Winston** é uma biblioteca de registros e foi projetada para realizar o registro das informações da aplicação de forma **assíncrona**, respeitando a arquitetura do Node.js.
 
 Para mais informações sobre o Winston, acesse [https://github.com/winstonjs/winston](https://github.com/winstonjs/winston).
 
@@ -52,9 +52,9 @@ Uma técnica muito interessante para realizar o registro de aplicações é sepa
 
 ## Criando o módulo de registro de aplicações
 
-Como o Winston trabalha com transportes, devemos configurar no mínimo um transporte. Nesse treinamento iremos utilizar o tranporte `Console` que é parecido com as funcionalidades do `console` do Node.js.
+Como o Winston trabalha com transportes, devemos configurar no mínimo um transporte. Nesse treinamento iremos utilizar o tipo de tranporte `Console` que é parecido com as funcionalidades do `console` do Node.js.
 
-Para mais informações sobre os transporte do Winston, acesse: [https://github.com/winstonjs/winston#transports](https://github.com/winstonjs/winston#transports).
+Para mais informações sobre os transportes do Winston, acesse: [https://github.com/winstonjs/winston#transports](https://github.com/winstonjs/winston#transports).
 
 Para criar o módulo de registro de aplicações, crie o arquivo `logger.js`.
 
@@ -112,13 +112,13 @@ Caso você não esteja utilizando as configurações do ESLint fornecidas por es
 
 ### Custo
 
-O registro de aplicações, mais conhecidos como `logs`, são registros como qualquer outro e eles consomem espaço em disco. Evite registar informações desnecessárias para não impactar no custo do projeto. Dependendo da quantidade de `logs` de uma aplicação, o armazenamento do `log` custa mais caro que a própria aplicação.
+O registro de aplicações, mais conhecidos como `logs`, são registros como qualquer outro e eles consomem espaço em disco. Evite registrar informações desnecessárias para não impactar no custo do projeto. Dependendo da quantidade de `logs` de uma aplicação, o armazenamento do `log` custa mais caro que a própria aplicação.
 
 Existem maneiras de reduzir o custo dos `logs` de uma aplicação, reduzindo a quantidade de registros que devem ser retidos. Essa parametrização varia de provedor para provedor.
 
 ## Resumo
 
-- Implementamos o módulo de registros de aplicações
+- Implementamos o módulo de registro de aplicações
 - Aprendemos os benefícios de utilizar módulos nas aplicações
 - Entendemos a importância de **não utilizar** instruções **síncronas** para não bloquear a execução do Node.js
 - Conhecemos uma alternativa ao `console` para realizar o registro de aplicações de forma **assíncrona**

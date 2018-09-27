@@ -16,7 +16,7 @@ Para mais informações sobre o Mongoose, acesse [https://mongoosejs.com/](https
 
 ## Instalando o Mongoose
 
-Para instalar o Mongoose no projeto, abra o Terminal e digite:
+Para instalar o Mongoose, abra o Terminal e digite:
 
 ```bash
 $ npm i mongoose
@@ -88,7 +88,7 @@ info: DATABASE: mongodb://localhost:27017/workshop
 Para criar a conexão com o MongoDB, edite o arquivo `index.js`.
 
 ```javascript
-// importar o mongoose
+// importar o Mongoose
 const mongoose = require('mongoose');
 
 // importar os módulos de configuração e registro de aplicações
@@ -96,7 +96,7 @@ const config = require('./config');
 const logger = require('./logger');
 
 // conectar ao banco de dados utilizando os parâmetros
-// informados através do módulo de configuração
+// informados através do módulo de configurações
 mongoose.connect(
   config.DATABASE,
   { useNewUrlParser: true }
@@ -105,7 +105,7 @@ mongoose.connect(
 // configurar o Mongoose para utilizar Promises nativas
 mongoose.Promise = global.Promise;
 
-// configurar o evento de conexão e exibir uma mensagem na saída
+// configurar o evento de conexão e exibir uma mensagem de sucesso
 mongoose.connection.on('connected', () => {
   logger.info('MongoDB connected!');
 });
@@ -166,7 +166,7 @@ No caso de um erro no banco de dados, o problema pode ser muito mais grave e req
 
 Uma das coisas mais valiosas de uma aplicação são as informações do banco de dados. Se você não tem experiência suficiente para implantar sua própria instância de banco de dados, contrate um serviço na nuvem.
 
-Se você optar por utilizar serviços na nuvem, **não utilize** os planos gratuitos, eles não estão preparados para isso. Contrate o serviço.
+Se você optar por utilizar serviços na nuvem, **não utilize** os planos gratuitos, eles não estão preparados para o ambiente de produção. Contrate o serviço.
 
 ## Resumo
 

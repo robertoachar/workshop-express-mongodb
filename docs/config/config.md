@@ -1,8 +1,8 @@
 # Configurações
 
-Outra funcionalidade básica de qualquer aplicação é a capacidade de carregar as configurações dinamicamente. As configurações podem ser: definição do ambiente de execução (`development` (desenvolvimento), `staging` (homologação), `test` (testes) e `production` (produção)), definição da porta de comunicação do servidor web, detalhes da conexão com o banco de dados, entre outras.
+Outra funcionalidade básica de qualquer aplicação é a capacidade de carregar as configurações dinamicamente. As configurações podem ser: definição do ambiente de execução (`development`, `staging`, `test`, `production`, respectivamente `desenvolvimento`, `homologação`, `testes`, `produção`), definição da porta de comunicação do servidor web, detalhes da conexão com o banco de dados, entre outras.
 
-Essas configurações não devem ser informadas diretamente no código-fonte, elas devem ser carregadas dinamicamente durante a inicialização da aplicação para que os valores sejam compartilhados entre os módulos.
+Essas configurações **não devem** ser informadas diretamente no código-fonte, elas devem ser carregadas dinamicamente durante a inicialização da aplicação para que os valores sejam compartilhados entre os módulos.
 
 No Node.js, essas configurações são informadas através de variáveis de ambientes e carregadas pela aplicação através do objeto `process.env`.
 
@@ -49,7 +49,7 @@ logger.info('Hello dotenv');
 logger.info(`NODE_ENV: ${process.env.NODE_ENV}`);
 ```
 
-Essa aplicação apresenta o seguinte resultado na saída do Terminal.
+Executando a aplicação, a seguinte informação é exibida no Terminal.
 
 ```text
 info: Hello dotenv
@@ -66,7 +66,7 @@ Da mesma maneira como fizemos com o módulo de registro de aplicações, é impo
 
 ## Restringindo as configurações
 
-O primeiro passo para garantir que as configurações sejam disponibilizadas apenas pelo módulo de configurações, devemos adicionar um regra no ESLint para não permitir o uso do objeto `process.env`.
+O primeiro passo para garantir que as configurações sejam disponibilizadas apenas pelo módulo de configurações, é adicionar um regra no ESLint para não permitir o uso do objeto `process.env`.
 
 Para adicionar a regra no ESLint, edite o arquivo `.eslintrc.json`.
 
@@ -115,7 +115,7 @@ require('dotenv').config();
 const environment = ['NODE_ENV'];
 
 // percorrer as variáveis de ambiente obrigatórias
-// e disparar um erro caso ela não seja informada
+// e disparar um erro caso alguma delas não seja informada
 environment.forEach((name) => {
   if (!process.env[name]) {
     throw new Error(`${name}: ${process.env[name]}`);
@@ -148,7 +148,7 @@ O resultado da análise estática apresenta 04 erros.
 ✖ 4 problems (4 errors, 0 warnings)
 ```
 
-Como o módulo `config` é o único módulo em que é permitido utilizar `process.env`, nós precisamos criar uma exceção para o ESLint. Para criar uma exceção no ESLint e permitir o uso do objeto `process.env` apenas módulo `config`, adicione a seguinte linha no começo do arquivo `config.js`.
+Como o módulo `config` é o único módulo em que é permitido utilizar `process.env`, nós precisamos criar uma exceção no ESLint. Para criar uma exceção no ESLint e permitir o uso do objeto `process.env` apenas no módulo `config`, adicione a seguinte linha no começo do arquivo `config.js`.
 
 ```javascript
 /* eslint no-process-env: 0 */
@@ -178,9 +178,9 @@ Para utilizar o módulo de configurações na aplicação, edite o arquivo `inde
 const config = require('./config');
 const logger = require('./logger');
 
-// imprimir Hello dotenv
+// exibir Hello dotenv
 logger.info('Hello dotenv');
-// imprimir NODE_ENV: development
+// exibir NODE_ENV: development
 logger.info(`NODE_ENV: ${config.NODE_ENV}`);
 ```
 
@@ -190,7 +190,7 @@ Vamos entender detalhadamente o que será executado:
 2. Quando o módulo de configurações é importado, ele utiliza o `dotenv` para carregar as variáveis de ambiente do arquivo `.env` e disponibiliza os valores no objeto `process.env`.
 3. O módulo de configurações verifica se as variáveis de ambiente obrigatórias foram informadas, caso contrário o módulo dispara um erro.
 4. O módulo de configurações exporta um objeto que contém a propriedade `NODE_ENV` com o valor de `process.env.NODE_ENV`.
-5. A aplicação utiliza o módulo de registro para imprimir `Hello dotenv` e o valor de `NODE_ENV`, que está definido como `development` no arquivo `.env`.
+5. A aplicação utiliza o módulo de registro de aplicações para exibir o valor de `NODE_ENV`, que está definido como `development` no arquivo `.env`.
 
 Realize a análise estática mais uma vez para ver o resultado. Para realizar a análise estática, abra o Terminal e digite:
 
@@ -212,10 +212,10 @@ As configurações carregam informações sensíves (secretas) da aplicação e 
 O arquivo `.gitignore`, responsável por excluir arquivos e diretórios do controle de versão, já está configurado para ignorar o arquivo `.env`.
 :::
 
-O carregamento das configurações para o ambiente de produção será abordado no `Módulo de Implantação`.
+O carregamento das configurações para o ambiente de produção será abordado no **Módulo de Implantação**.
 
 ::: tip Dica
-Uma boa prática é adicionar um exemplo do arquivo `.env` no `README` do projeto para auxiliar outros desenvolvedores. Essa etapa será abordada no `Módulo de Documentação`.
+Uma boa prática é adicionar um exemplo do arquivo `.env` no `README` do projeto para auxiliar outros desenvolvedores. Essa etapa será abordada no **Módulo de Documentação**.
 :::
 
 ## Resumo

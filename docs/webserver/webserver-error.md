@@ -10,7 +10,7 @@ O protoloco HTTP possui códigos específicos para informar o _status_ da respos
 
 Para mais informações sobre HTTP Status, acesse [MDN - HTTP Status](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status).
 
-Os 03 _status_ mais comuns utilizados por aplicações Web são:
+Os 03 _status_ mais comuns utilizados são:
 
 - [200 OK](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status/200)
 - [404 Not Found](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status/404)
@@ -67,7 +67,7 @@ module.exports.catchAll = (err, req, res, next) => {
 
 ### Integração com o Express
 
-Para integrar o módulo tratamento de erros no Express, edite o arquivo `app.js`.
+Para integrar o módulo de tratamento de erros no Express, edite o arquivo `app.js`.
 
 ```javascript
 const bodyParser = require('body-parser');
@@ -111,7 +111,7 @@ Abra o Postman e faça uma requisição `GET` em `http://localhost:3000/hello`. 
 }
 ```
 
-Edite o arquivo `app.js` e crie outra rota logo abaixo da rota `/`. Nessa rota nós vamos disparar um erro propositalmente.
+Edite o arquivo `app.js`, crie outra rota logo abaixo da rota `/`, e dispare um erro propositalmente.
 
 ```javascript
 ...

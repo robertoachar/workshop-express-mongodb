@@ -2,7 +2,7 @@
 
 ## Express
 
-**Express** é um servidor Web rápido e leve que fornece um conjunto de recursos necessários para a criação de uma API robusta.
+**Express** é um _framework_ de aplicação que disponibiliza um servidor Web rápido e leve e fornece um conjunto de recursos necessários para a criação de uma API robusta.
 
 Para mais informações sobre o Express, acesse [https://expressjs.com/](https://expressjs.com/).
 
@@ -33,6 +33,10 @@ PORT = 3000
 ```
 
 Nessa configuração estamos definindo o número da porta que será utilizada pelo Express.
+
+::: tip Dica
+Por convenção, utilizamos a porta `3000`.
+:::
 
 Para disponibilizar as informações do Express através do módulo de configurações, edite o arquivo `config.js`.
 
@@ -122,7 +126,7 @@ mongoose.connection.on('error', (err) => {
   process.exit(1);
 });
 
-// inicializar o express na porta definida no arquivo .env
+// inicializar o Express na porta definida no arquivo .env
 app.listen(config.PORT, () => {
   logger.info('Hello Express');
   logger.info(`NODE_ENV: ${config.NODE_ENV}`);
@@ -131,7 +135,7 @@ app.listen(config.PORT, () => {
 });
 ```
 
-A função `listen()` inicializa o servidor web e começa a aceitar requisições na porta 3000.
+A função `listen()` inicializa o servidor web e começa a aceitar requisições na porta `3000`.
 
 O resultado da execução da aplicação pode ser visualizado no Terminal.
 
@@ -145,11 +149,11 @@ info: MongoDB connected!
 
 ## Validando as configurações do Express
 
-Para validar as configurações do Express através do Postman, abra o Postman, selecione a opção `GET`, informe a URL `http://localhost:3000` e clique em **Send**.
+Para validar as configurações do Express, abra o Postman, selecione a opção `GET`, informe a URL `http://localhost:3000` e clique em **Send**.
 
 ![Postman](/images/webserver/postman-localhost.png)
 
-O `body` da resposta deve apresentar a seguinte saída.
+O `body` da resposta deve apresentar a seguinte informação.
 
 ```text
 Hello Express
@@ -157,13 +161,13 @@ Hello Express
 
 ## Alterando o formato para JSON
 
-Para alterar a saída para o formato JSON, edite o arquivo `app.js`.
+Para alterar a resposta para o formato JSON, edite o arquivo `app.js`.
 
 ```javascript
 app.get('/', (req, res) => res.json({ message: 'Hello Express' }));
 ```
 
-Realize a requisição novamente através do Postman e o formato da resposta deve ser JSON.
+Realizando a requisição novamente através do Postman, o formato da resposta deve ser JSON.
 
 ```json
 {
