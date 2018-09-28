@@ -4,6 +4,7 @@ module.exports = {
   title: 'Express + MongoDB',
   description: 'Treinamento: REST API com Express e MongoDB.',
   dest: './build',
+  ga: 'UA-91775148-5',
   head,
   themeConfig: {
     sidebar: [
