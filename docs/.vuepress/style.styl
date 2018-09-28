@@ -1,7 +1,32 @@
+@import '~vuepress/lib/default-theme/styles/config'
+
 .home
   .hero
     .description
       color #555555
+
+/* Feedbacks */
+
+.feedbacks
+  border-top 1px solid $borderColor
+  display grid
+  grid-gap 2rem
+  grid-template-columns repeat(auto-fit, minmax(400px, 1fr))
+  margin-top 0
+  padding 1.2rem 0
+  &__title
+    margin 0
+
+.feedback
+  display grid
+  blockquote
+    display grid
+    grid-template-rows 1fr auto
+    color lighten($textColor, 15%)
+    font-style italic
+    margin 0
+    span
+      font-style normal
 
 .token
   &.comment,
